@@ -241,18 +241,18 @@ void motor_control()
 void forward()
 {
   /*The pin numbers and high, low values might be different depending on your connections */
-  digitalWrite(motorInput1, LOW);
-  digitalWrite(motorInput2, HIGH);
-  digitalWrite(motorInput3, LOW);
-  digitalWrite(motorInput4, HIGH);
-}
-void reverse()
-{
-  /*The pin numbers and high, low values might be different depending on your connections */
   digitalWrite(motorInput1, HIGH);
   digitalWrite(motorInput2, LOW);
   digitalWrite(motorInput3, HIGH);
   digitalWrite(motorInput4, LOW);
+}
+void reverse()
+{
+  /*The pin numbers and high, low values might be different depending on your connections */
+  digitalWrite(motorInput1, LOW);
+  digitalWrite(motorInput2, HIGH);
+  digitalWrite(motorInput3, LOW);
+  digitalWrite(motorInput4, HIGH);
 }
 void right()
 {
