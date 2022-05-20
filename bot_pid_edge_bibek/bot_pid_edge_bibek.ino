@@ -2,11 +2,11 @@
 int sensor1 = A0;      // Left most sensor
 int sensor2 = A1;
 int sensor3 = A2;
-int sensor4 = A3;      // Right most sensor
+int sensor4 = A3;      
 int sensor5 = A4;
 int sensor6 = A5;
 int sensor7 = 2;
-int sensor8 = 3;
+int sensor8 = 3;       // Right most sensor
 
 // Initial Values of Sensors
 int sensor[8] = {0, 0, 0, 0, 0, 0, 0, 0};
