@@ -1,11 +1,11 @@
-int l1=4;
-int l2=5;
+int l1=9;
+int l2=8;
 
-int r1=6;
-int r2=7;
+int r1=11;
+int r2=10;
 
-int enl=9;
-int enr=10;
+int enl=5;
+int enr=6;
 
 int a[8];
 int last_proportional=0;
@@ -45,8 +45,8 @@ void setup() {
   pinMode(A3,INPUT);
   pinMode(A4,INPUT);
   pinMode(A5,INPUT);
-  pinMode(12,INPUT);
-  pinMode(13,INPUT);
+  pinMode(2,INPUT);
+  pinMode(3,INPUT);
   Serial.begin(9600);
 
  // pinMode(ledg,OUTPUT);
@@ -146,8 +146,8 @@ int readline()
   a[3]=analogRead(A3);
   a[4]=analogRead(A4);
   a[5]=analogRead(A5);
-  a[6]=digitalRead(12);
-  a[7]=digitalRead(13);
+  a[6]=digitalRead(2);
+  a[7]=digitalRead(3);
   int v;
  v=(7000*a[0]+6000*a[1]+5000*a[2]+4000*a[3]+3000*a[4]+2000*a[5]+1000*a[6]+0*a[7])/(a[0]+a[1]+a[2]+a[3]+a[4]+a[5]+a[6]+a[7]);
  Serial.println(a[7]);
@@ -259,6 +259,3 @@ int mod(int v)
   else if(v>0)
   return v;
 }
-
-
-
