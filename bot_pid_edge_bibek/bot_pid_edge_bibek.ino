@@ -22,7 +22,7 @@ int ENB = 5;
 //Initial Speed of Motor
 int initial_motor_speed = 140;
 
-//// Output Pins for Led
+// Output Pins for Led
 //int ledPin1 = A3;
 //int ledPin2 = A4;
 
