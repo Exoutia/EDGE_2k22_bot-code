@@ -75,8 +75,8 @@ void loop()
   delay (1000);
   
   
-  //black=1
-  //white=0
+  //black=0
+  //white=1
   //forward
   if(
   ((s1==1)&&(s2==1)&&(s3==1)&&(s4==0)&&(s5==0)&&(s6==1)&&(s7==1)&&(s8==1))||
