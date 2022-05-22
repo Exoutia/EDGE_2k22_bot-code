@@ -67,15 +67,22 @@ void setup()
 }
 void loop()
 {
+    int direction;
     read_sensor_values();
     calculate_pid();
     motor_control();
-    
+    while(sensor[0]!=sensor[7]){
+        direction = sensor[0] - sensor[7];
+        flag = 1;
+    }
+    if(sensor[0]==sensor[7] && flag==1){
+        turn_direction(direction);
+    }   
     
 }
 
 void know_direction(){
-    
+
 }
 
 void read_sensor_values()
@@ -119,15 +126,14 @@ void read_sensor_values()
 
 }
 
-void turn_direction(){
-    int direction = sensor[0] - sensor[7];
+void turn_direction(int direction){
     if (direction == 1){
         sharpLeftTurn();
     }
     else{
         sharpRightTurn();
     }
-
+    flag = 0;
 }
 
 void calculate_pid()
@@ -215,7 +221,6 @@ void sharpLeftTurn() {
 }
 void stop_bot()
 {
-  /*The pin numbers and high, low values might be different depending on your connections */
   digitalWrite(motorInput1, LOW);
   digitalWrite(motorInput2, LOW);
   digitalWrite(motorInput3, LOW);
